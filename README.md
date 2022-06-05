@@ -1,5 +1,7 @@
 ## Lab 7
 
+[Home](https://liv-edi.github.io/cit281/)
+
 In this lab we created our own GitHub organization for the CIT Minor, cerated our first GitHub repositories, cloned the repo to our local systems, created lab javascript file and initilaized folder as a Node.js folder, updated and commited lab JS file to practice error handling, and pushed our changes to GitHub.
 
 Technologies used in this lab:
