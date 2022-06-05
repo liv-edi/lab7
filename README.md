@@ -1,37 +1,59 @@
-## Welcome to GitHub Pages
+## Lab 7
 
-You can use the [editor on GitHub](https://github.com/liv-edi/lab7/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+In this lab we created our own GitHub organization for the CIT Minor, cerated our first GitHub repositories, cloned the repo to our local systems, created lab javascript file and initilaized folder as a Node.js folder, updated and commited lab JS file to practice error handling, and pushed our changes to GitHub.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Technologies used in this lab:
+- VSCode
+- Node.js
+- GitHub
+- git
 
-### Markdown
+The purpose of this lab was to gain experience ussing GitHub, git, committing changes to JS files, pushing changes to GitHub.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```
+class CustomError extends Error {
+    constructor(errName) {
+        super(errName);
+        this.name = "CustomError";
+    }
+}
 
-```markdown
-Syntax highlighted code block
+function throwGenericError() {
+    throw new Error("Generic error");
+}
 
-# Header 1
-## Header 2
-### Header 3
+function throwCustomError() {
+    throw new CustomError("Custom error");
+}
 
-- Bulleted
-- List
+try {
+    console.log("Force generic error");
+    console.log("Generic error try block");
+    throwGenericError();
+    //console.log("Generic error try block");
+}
+catch (err) {
+    console.log("Generic error catch block");
+    console.log(`Error: ${err.message}`);
+}
+finally {
+    console.log("Generic error finally block");
+}
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+try {
+    console.log("Force custom error");
+    console.log("Custom error try block");
+    throwCustomError();
+    //console.log("Custom error try block");
+}
+catch (err) {
+    console.log("Custom error catch block");
+    console.log(`CustomError: ${err.message}`);
+}
+finally {
+    console.log("Custom error finally block");
+}
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+<img width="655" alt="lab-07" src="https://user-images.githubusercontent.com/105889862/172033957-627d922e-fc54-4bb7-9008-6490d05d18a3.png">
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/liv-edi/lab7/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
